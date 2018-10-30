@@ -1,3 +1,4 @@
+#Installing httpd server on centos:7 and deploying index.html file
 FROM centos:7
 MAINTAINER Ram
 RUN yum -y update && yum install -y net-tools
