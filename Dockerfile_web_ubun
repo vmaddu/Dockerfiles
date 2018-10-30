@@ -1,0 +1,11 @@
+#Dockerfile for installing apache2 websever on ubuntu and starting service
+FROM ubuntu:16.04
+MAINTAINER Ram
+RUN apt-get update && apt-get install -y net-tools
+RUN apt-get install -y wget && apt-get install -y apache2
+WORKDIR /opt/
+USER root
+EXPOSE 80
+VOLUME /opt/myvol
+CMD ["apachectl","-D","FOREGROUND"]
+
