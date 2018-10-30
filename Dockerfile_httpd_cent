@@ -1,0 +1,8 @@
+FROM centos:7
+MAINTAINER Ram
+RUN yum -y update && yum install -y net-tools
+RUN yum install -y httpd
+EXPOSE 80
+WORKDIR /var/www/html
+COPY index.html /var/www/html/index.html
+CMD ["/usr/sbin/httpd", "-D","FOREGROUND"]
