@@ -1,0 +1,6 @@
+#Dockerfile to run python script using volume
+#command to create container: docker run --rm -v /opt/vol:/opt python-img /opt/add.py, here directly running script without interacting with container
+
+FROM python:3
+VOLUME /opt
+ENTRYPOINT ["python3"]
